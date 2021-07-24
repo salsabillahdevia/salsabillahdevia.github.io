@@ -1,0 +1,25 @@
+body {
+  background-color: #bebebe;
+}
+.jumbotron {
+  padding-top: 5rem;
+  margin-left: -2rem;
+  background-color: #bebebe;
+}
+
+.wave-jumbotron {
+  margin-top: -3rem;
+}
+
+.akasuna-color {
+  background-color: #c03c3cf1;
+  color: white;
+}
+
+.second-color {
+  background-color: #bebebe;
+}
+
+.mtop-5 {
+  margin-top: 5rem;
+}
