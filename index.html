@@ -244,7 +244,19 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <form>
+              <div
+                class="alert alert-success alert-dismissible fade show d-none"
+                role="alert"
+              >
+                <strong>Thank You!</strong> Your message has been delivered.
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <form name="portfolio-contact-form">
                 <div class="mb-3">
                   <label for="name" class="form-label">Full Name</label>
                   <input
@@ -252,11 +264,17 @@
                     class="form-control"
                     id="name"
                     aria-describedby="name"
+                    name="nama"
                   />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" />
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                  />
                 </div>
                 <div class="mb-3">
                   <label for="message" class="form-label">Message</label>
@@ -264,11 +282,27 @@
                     class="form-control"
                     id="message"
                     rows="3"
+                    name="pesan"
                   ></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-lg btn-secondary">
+                <button
+                  type="submit"
+                  class="btn btn-lg btn-secondary btn-kirim"
+                >
                   Submit
+                </button>
+                <button
+                  class="btn btn-lg btn-secondary btn-loading d-none"
+                  type="button"
+                  disabled
+                >
+                  <span
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Loading...
                 </button>
               </form>
             </div>
@@ -293,6 +327,33 @@
       </h5>
     </footer>
     <!-- end footer -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyLpmgP14CSXyojfJFfge6vEAmw44K6RMDlFIZU-b_FUt9h1etvoCFMYGgtWX-SxaXOuQ/exec";
+      const form = document.forms["portfolio-contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika tombol submit diklik, show btn-loading, hide btn-kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // ketika tombol submit diklik, show btn-kirim, hide btn-loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // show alert
+            alert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
 </html>
