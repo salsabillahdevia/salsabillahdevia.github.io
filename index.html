@@ -26,7 +26,7 @@
       class="navbar navbar-expand-lg navbar-dark shadow fixed-top"
       style="background-color: #c03c3cec"
     >
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="#">Salsabillah Devia Khansa</a>
         <button
           class="navbar-toggler"
@@ -34,7 +34,6 @@
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
@@ -48,13 +47,20 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" aria-current="page" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" aria-current="page" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Me</a>
+              <a class="nav-link" aria-current="page" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#contact"
+                >Contact Me</a
+              >
             </li>
           </ul>
         </div>
@@ -150,8 +156,8 @@
     </section>
     <!-- end about me -->
 
-    <!-- projects -->
-    <section id="projects">
+    <!-- skills -->
+    <section id="skills">
       <div class="container">
         <div class="row text-center mb-4">
           <div class="col mtop-5"><h2>My Skills</h2></div>
@@ -159,17 +165,23 @@
         <div class="row d-flex justify-content-center">
           <div
             class="col-md-3 col-6"
-            data-aos="flip-left"
+            data-aos="fade-down"
             data-aos-delay="0"
-            data-aos-duration="800"
-            data-aos-once="true"
+            data-aos-duration="500"
+            data-aos-once="false"
           >
             <i
               class="bi bi-laptop d-flex justify-content-center text-danger"
               style="font-size: 8rem"
             ></i>
             <h3 class="text-danger text-center">Web Programming</h3>
-            <p style="text-align: justify">
+            <p
+              style="text-align: justify"
+              data-aos="fade-up"
+              data-aos-delay="0"
+              data-aos-duration="500"
+              data-aos-once="false"
+            >
               PHP (Codeigniter, Laravel, and Native), Javascript, CSS, HTML, SQL
               for database, and RESTful API. And Frameworks such as Codeigniter,
               Laravel, Bootstrap, and Materialize.
@@ -177,34 +189,46 @@
           </div>
           <div
             class="col-md-3 col-6"
-            data-aos="flip-left"
+            data-aos="fade-down"
             data-aos-delay="100"
-            data-aos-duration="800"
-            data-aos-once="true"
+            data-aos-duration="500"
+            data-aos-once="false"
           >
             <i
               class="bi bi-lightbulb d-flex justify-content-center text-danger"
               style="font-size: 8rem"
             ></i>
             <h3 class="text-danger text-center">Analysis</h3>
-            <p style="text-align: justify">
+            <p
+              style="text-align: justify"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="500"
+              data-aos-once="false"
+            >
               Analyze systems using UML, analyze problems and create solutions
               to be implemented on web systems, and analyze user requirements.
             </p>
           </div>
           <div
             class="col-md-3 col-6"
-            data-aos="flip-left"
+            data-aos="fade-down"
             data-aos-delay="200"
-            data-aos-duration="800"
-            data-aos-once="true"
+            data-aos-duration="500"
+            data-aos-once="false"
           >
             <i
               class="bi bi-person-check d-flex justify-content-center text-danger"
               style="font-size: 8rem"
             ></i>
             <h3 class="text-danger text-center">Personality</h3>
-            <p style="text-align: justify">
+            <p
+              style="text-align: justify"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+              data-aos-once="false"
+            >
               Ability to work individually or as team. High willingness to
               learn. Reliable and professional. Fast learner. Positive attitude.
               Motivated.
@@ -212,17 +236,23 @@
           </div>
           <div
             class="col-md-3 col-6"
-            data-aos="flip-left"
+            data-aos="fade-down"
             data-aos-delay="300"
-            data-aos-duration="800"
-            data-aos-once="true"
+            data-aos-duration="500"
+            data-aos-once="false"
           >
             <i
               class="bi bi-microsoft d-flex justify-content-center text-danger"
               style="font-size: 8rem"
             ></i>
             <h3 class="text-danger text-center">Microsoft Office</h3>
-            <p style="text-align: justify">
+            <p
+              style="text-align: justify"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="500"
+              data-aos-once="false"
+            >
               Ms Word for create letters, resumes, reports, and others. then Ms
               Power Point for create effective and attractive presentations, and
               Ms Excel for create recapitulation, evaluation, and data
@@ -243,103 +273,227 @@
         ></path>
       </svg>
     </section>
-    <!-- end projects -->
+    <!-- end skills -->
 
-    <!-- gallery -->
-    <section id="gallery">
+    <!-- projects -->
+    <section id="projects">
       <div class="akasuna-color">
         <div class="container">
           <div class="row">
-            <div class="col mtop-5 text-center"><h2>Gallery</h2></div>
+            <div class="col mtop-5 text-center"><h2>My Projects</h2></div>
           </div>
           <div class="row mtop-5">
-            <div class="col-md-3 col-6 p-1">
+            <div class="col-md-4">
               <a href="#"
                 ><img
-                  src="assets/img/projects/e-recruitment-recruiters.png"
-                  alt="Akasuna E-Recruitment"
+                  src="assets/img/projects/bmg-login.png"
+                  alt="Akasuna Bina Muda Gemilang - SIDAB"
                   class="img-fluid"
-                  data-aos="fade-down-right"
-                  data-aos-delay="0"
-                  data-aos-once="true"
+                  data-aos="zoom-in-down"
+                  data-aos-once="false"
               /></a>
             </div>
-            <div class="col-md-3 col-6 p-1">
+            <div class="col-md-8">
+              <p
+                data-aos="fade-right"
+                data-aos-once="false"
+                data-aos-delay="200"
+                style="text-align: justify"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                nam. Natus quam delectus fuga voluptatem ipsum maiores sed
+                incidunt illo eaque! Repellendus facere natus, explicabo quam
+                possimus ipsa repellat necessitatibus, adipisci sequi quo
+                laboriosam, iure corporis illum ab omnis! Aliquid beatae esse
+                dolorem magni eligendi recusandae unde iure a voluptas illum
+                alias praesentium soluta, eveniet exercitationem in omnis ea rem
+                molestias doloremque atque est quo! Dicta error quam, nihil
+                dolorum minima, veritatis labore animi doloribus alias incidunt
+                dolores unde! Magnam ipsa, impedit laudantium nemo enim
+                voluptates sunt ea ab eaque voluptate, eum qui similique
+                praesentium et? Aspernatur vitae temporibus veritatis.
+              </p>
+            </div>
+            <hr class="mt-4 mb-4" />
+            <div class="col-md-8">
+              <p
+                data-aos="fade-right"
+                data-aos-once="false"
+                data-aos-delay="200"
+                style="text-align: justify"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                ad dolores sit omnis in incidunt labore voluptatem reprehenderit
+                odio aspernatur suscipit minima ut, praesentium deserunt
+                expedita voluptatum neque repudiandae sequi non unde alias culpa
+                temporibus quibusdam excepturi. Cupiditate distinctio, officia
+                minus molestias laborum magnam fuga nemo soluta nisi possimus
+                molestiae totam magni labore voluptatem optio illum in atque,
+                aliquam vel similique earum? Dignissimos delectus veritatis
+                reiciendis ipsum ab error vitae maiores quis sit sed. Laborum
+                eos culpa nobis voluptatum nam.
+              </p>
+            </div>
+            <div class="col-md-4">
               <a href="#"
                 ><img
                   src="assets/img/projects/hypmic-page.jpg"
                   alt="Hypnosis Microphone Page"
                   class="img-fluid"
-                  data-aos="fade-down-left"
-                  data-aos-delay="200"
-                  data-aos-once="true"
+                  data-aos="zoom-in-down"
+                  data-aos-once="false"
               /></a>
             </div>
-            <div class="col-md-3 col-6 p-1">
+            <hr class="mt-4 mb-4" />
+            <div class="col-md-4">
               <a href="#"
                 ><img
-                  src="assets/img/projects/hypmic-cast.jpg"
-                  alt="Hypnosis Microphone Page"
+                  src="assets/img/projects/login-e-recruitment.jpg"
+                  alt="Akasuna E-Recruitment"
                   class="img-fluid"
-                  data-aos="fade-down-right"
-                  data-aos-delay="400"
-                  data-aos-once="true"
+                  data-aos="zoom-in-down"
+                  data-aos-once="false"
               /></a>
             </div>
-            <div class="col-md-3 col-6 p-1">
+            <div class="col-md-8">
+              <p
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-once="false"
+                style="text-align: justify"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Recusandae provident voluptas quae eaque ad odio nostrum, nam
+                tempore ipsa blanditiis sequi! Similique temporibus veritatis
+                sit perspiciatis illo ipsa repellat reiciendis repudiandae
+                deleniti sunt ducimus itaque quae ab atque dolor ipsam quas
+                error architecto magnam consectetur iusto porro hic, earum
+                expedita. Esse iste quibusdam non veniam aperiam dolor aliquid
+                ut beatae harum illo voluptas tempore vitae totam debitis,
+                accusantium deserunt vel, at quisquam ipsam voluptatum a eos
+                voluptatibus dicta. Repellat, tenetur? Nobis perferendis,
+                recusandae mollitia ut voluptate provident!
+              </p>
+            </div>
+            <hr class="mt-4 mb-4" />
+            <div class="col-md-8">
+              <p
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-once="false"
+                style="text-align: justify"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+                illo repellendus aspernatur ipsa corporis id harum vero suscipit
+                neque! Est voluptas accusamus itaque natus asperiores nesciunt
+                ratione laborum ullam. Eveniet quas pariatur repudiandae ipsum!
+                Quo dolor, quos aliquam ducimus et voluptatum labore sint illo
+                dolore nemo laboriosam in odit, sequi consequatur quisquam cum,
+                optio distinctio veritatis quod quidem. Nihil, odit.
+              </p>
+            </div>
+            <div class="col-md-4">
               <a href="#"
                 ><img
                   src="assets/img/projects/index-e-commerce.png"
                   alt="Akasuna E-Commerce"
                   class="img-fluid"
-                  data-aos="fade-down-left"
-                  data-aos-delay="600"
-                  data-aos-once="true"
+                  data-aos="zoom-in-down"
+                  data-aos-once="false"
               /></a>
             </div>
-            <div class="col-md-3 col-6 p-1">
+            <hr class="mt-4 mb-4" />
+            <div class="col-md-4">
               <a href="#"
                 ><img
                   src="assets/img/projects/e-comerce-detail.png"
                   alt="Akasuna E-Commerce"
                   class="img-fluid"
-                  data-aos="fade-down-right"
-                  data-aos-delay="800"
-                  data-aos-once="true"
+                  data-aos="zoom-in-down"
+                  data-aos-once="false"
               /></a>
             </div>
-            <div class="col-md-3 col-6 p-1">
-              <a href="assets/img/projects/hypmic-seiyuu.jpg"
-                ><img
-                  src="assets/img/projects/hypmic-seiyuu.jpg"
-                  alt="Hypnosis Microphone Page"
-                  class="img-fluid"
-                  data-aos="fade-down-left"
-                  data-aos-delay="1000"
-                  data-aos-once="true"
-              /></a>
+            <div class="col-md-8">
+              <p
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-once="false"
+                style="text-align: justify"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur optio fugit aliquam dolorum labore delectus ad
+                necessitatibus maiores, dolor doloremque asperiores voluptates
+                quod sapiente! Eos, dignissimos voluptates a, id natus similique
+                quam, aliquam magnam error illum autem voluptatem. Laudantium
+                laboriosam facilis earum totam unde odio nesciunt, ab recusandae
+                facere sequi, adipisci magnam aut nam quam voluptatem libero
+                voluptates praesentium! Laudantium ratione, tempora totam cum,
+                id unde asperiores quod nostrum voluptates incidunt aspernatur
+                consequuntur earum quas.
+              </p>
             </div>
-            <div class="col-md-3 col-6 p-1">
+            <hr class="mt-4 mb-4" />
+            <div class="col-md-8">
+              <p
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-once="false"
+                style="text-align: justify"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente ullam repellat delectus, ad quis totam corporis.
+                Laborum vitae dolores corrupti earum inventore ratione ullam
+                asperiores, voluptates explicabo cupiditate, facere est alias ab
+                ipsam incidunt expedita, eos in excepturi perspiciatis!
+                Explicabo omnis amet saepe asperiores, id sed sit rerum ad vel
+                impedit dolor reprehenderit tempora nihil sequi alias. Nostrum
+                provident autem impedit laudantium tenetur, earum quo eum cumque
+                similique magni nesciunt deleniti doloribus expedita in.
+                Doloribus voluptates eligendi vel ipsam fugit hic quisquam
+                veniam.
+              </p>
+            </div>
+            <div class="col-md-4">
               <a href="#"
                 ><img
                   src="assets/img/projects/e-recruitment-lowongan.png"
                   alt="Akasuna E-Recruitment"
                   class="img-fluid"
-                  data-aos="fade-down-right"
-                  data-aos-delay="1200"
-                  data-aos-once="true"
+                  data-aos="zoom-in-down"
+                  data-aos-once="false"
               /></a>
             </div>
-            <div class="col-md-3 col-6 p-1">
+            <hr class="mt-4 mb-4" />
+            <div class="col-md-4">
               <a href="#"
                 ><img
                   src="assets/img/projects/e-recruitment-posisi.png"
                   alt="Akasuna E-Recruitment"
                   class="img-fluid"
-                  data-aos="fade-down-left"
-                  data-aos-delay="1400"
-                  data-aos-once="true"
+                  data-aos="zoom-in-down"
+                  data-aos-once="false"
               /></a>
+            </div>
+            <div class="col-md-8">
+              <p
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-once="false"
+                style="text-align: justify"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Praesentium voluptas soluta autem esse tempore dignissimos
+                maxime accusantium est aperiam numquam. Sit explicabo iusto, ex
+                unde minima eveniet velit praesentium aut harum laudantium
+                repellendus quae numquam cupiditate ducimus at nihil earum
+                laborum qui beatae sed aspernatur facilis nemo libero.
+                Architecto in pariatur provident libero deserunt, rerum ipsa id?
+                Ex, sapiente error ipsa earum omnis odit blanditiis? Soluta
+                error laudantium unde iste provident. Officia inventore
+                doloribus aperiam perferendis autem exercitationem aliquid
+                molestiae provident corrupti possimus? Temporibus incidunt
+                laborum illum tenetur, placeat ea!
+              </p>
             </div>
           </div>
         </div>
@@ -352,7 +506,7 @@
         ></path>
       </svg>
     </section>
-    <!-- end gallery -->
+    <!-- end projects -->
 
     <!-- contact -->
     <section id="contact">
@@ -465,14 +619,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      const galleryImage = document.querySelectorAll(".gallery-img");
+      // const galleryImage = document.querySelectorAll(".gallery-img");
 
-      galleryImage.forEach((img, i) => {
-        img.dataset.aos = "zoom-out-up";
-      });
+      // galleryImage.forEach((img, i) => {
+      //   img.dataset.aos = "zoom-out-up";
+      // });
       AOS.init();
     </script>
 

@@ -25,17 +25,14 @@ body {
 }
 
 .gallery-img {
-  width: 400px;
-  width: 100%;
+  width: 300px;
+  height: 200px;
 }
 
 #gallery .row > * {
   padding: 0;
 }
-<<<<<<< HEAD
-=======
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
->>>>>>> e3b68a0f2e8c50140e78a54878e88090cea03b60
